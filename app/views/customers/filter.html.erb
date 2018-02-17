@@ -1,0 +1,31 @@
+<h2>Customers</h2>
+
+<%= form_tag(customers_path, method: :get) do %>
+  <%= label_tag(:filter_by_name) %>
+  <%= text_field_tag(:filter_name) %>
+  <%= submit_tag(:filter) %>
+<% end %>
+
+<h4><%= @customers.total_entries %> total results</h4>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.id %></td>
+
+        <td><%= customer.first_name %></td>
+        <td><%= customer.last_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @customers %>
