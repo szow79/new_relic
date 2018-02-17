@@ -13,4 +13,9 @@ unless Rails.env == "production"
         last_name: Faker::Name.last_name
     )
   end
+  # for rspec test
+  Customer.create(
+      first_name: "test_first_name",
+      last_name: "test_last_name"
+  )
 end
