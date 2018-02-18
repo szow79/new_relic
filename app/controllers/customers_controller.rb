@@ -2,6 +2,7 @@ class CustomersController < ApplicationController
 
   def index
     if params[:filter_name].present?
+      # customers whose first name or last name contains query
       @customers = Customer.where("first_name LIKE '%#{params[:filter_name]}%'").
                 or(Customer.where("last_name LIKE '%#{params[:filter_name]}%'")).
                 paginate(:page => params[:page])
