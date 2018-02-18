@@ -1,31 +1,32 @@
-<h2>Customers</h2>
+<h2 class="list-group-item-info padding-sm">Customers</h2>
 
-<%= form_tag(customers_path, method: :get) do %>
-  <%= label_tag(:filter_by_name) %>
-  <%= text_field_tag(:filter_name) %>
-  <%= submit_tag(:filter) %>
-<% end %>
+<div class="col-md-12 margin-sm">
+  <%= form_tag(customers_path, method: :get) do %>
+    <%= label_tag(:filter_by_name) %>
+    <%= text_field_tag(:filter_name, @current_query, :class => "input-sm") %>
+    <%= submit_tag(:filter, :class => "col-md-1 btn btn-info btn-sm input-group-btn") %>
+  <% end %>
 
-<h4><%= @customers.total_entries %> total results</h4>
-
-<table>
-  <thead>
-    <tr>
-      <td>ID</td>
-      <td>First Name</td>
-      <td>Last Name</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.id %></td>
-
-        <td><%= customer.first_name %></td>
-        <td><%= customer.last_name %></td>
+  <h6><%= @customers.total_entries %> total results</h6>
+  <table class="table table-striped margin-sm">
+    <thead>
+      <tr class="row">
+        <td class="col-md-1">ID</td>
+        <td class="col-md-4">First Name</td>
+        <td class="col-md-4">Last Name</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr class="row">
+          <td class="col-md-1"><%= customer.id %></td>
+
+          <td class="col-md-4"><%= customer.first_name %></td>
+          <td class="col-md-4"><%= customer.last_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <%= will_paginate @customers %>

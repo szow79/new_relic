@@ -8,6 +8,7 @@ class CustomersController < ApplicationController
     else
       @customers = Customer.all.paginate(:page => params[:page])
     end
+    @current_query = params[:filter_name]
     render(:filter)
   end
 

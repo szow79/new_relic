@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+.padding-sm {
+  padding: 0.5em;
+}
+
+.padding-md {
+  padding: 0.75em;
+}
+
+.padding-lg {
+  padding: 1em;
+}
+
+.margin-sm {
+  margin: 0.5em;
+}
+
+.margin-md {
+  margin: 0.75em;
+}
+
+.margin-lg {
+  margin: 1em;
+}
+
+.pagination {
+    font-size: 16px;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+.pagination a:hover {
+    background: gray none repeat scroll 0 0;
+    text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination a:active {
+    text-shadow: none;
+}
+
+.pagination .current {
+    background: gray none repeat scroll 0 0;
+    color: white;
+    text-shadow: 1px 1px 1px #171717;
+}
