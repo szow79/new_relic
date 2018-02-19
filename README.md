@@ -25,3 +25,11 @@ Please follow below steps to setup the project :)
 **step 3 - run server on localhost:**
 * run `rails s` in terminal at project root
 * open your browser and navigate to localhost:3000/customers
+
+## Testing
+
+For this project we use RSpec. Please make sure all the test cases are passed before pushing to master
+
+**how to run test cases**
+
+* navigate to project root and run `rspec spec/`
