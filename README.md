@@ -33,3 +33,7 @@ For this project we use RSpec. Please make sure all the test cases are passed be
 **how to run test cases**
 
 * navigate to project root and run `rspec spec/`
+
+## Illustration / Diagram
+
+![screen shot 2018-02-20 at 10 30 52 pm](https://user-images.githubusercontent.com/8421088/36466310-52a7f7f2-168e-11e8-968a-b7ee36732f88.png)
