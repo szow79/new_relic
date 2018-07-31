@@ -1,6 +1,6 @@
 # README
 
-This is the readme file for Si Cheng's New Relic code challenge submission.
+sample project
 
 ## Setup
 
